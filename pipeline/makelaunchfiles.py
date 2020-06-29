@@ -7,7 +7,6 @@ batch_size = 20
 for i in range(0,int(len(folders)/batch_size)+1):
     yvals = folders[batch_size*i:batch_size*(i+1),0].astype(int)
     zvals = folders[batch_size*i:batch_size*(i+1),1].astype(int)
-    print(i, yvals)
     writefile = open(str('launch')+str(i)+str('.slurm'),'w')
     writefile.write(str('#!/bin/bash') + '\n' + str('## Job Name') + '\n')
     writefile.write(str('#SBATCH --job-name=') + str('sp_')+str(i)+'\n')
