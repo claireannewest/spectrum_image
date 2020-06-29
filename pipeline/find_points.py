@@ -3,7 +3,7 @@ shape = np.loadtxt('shape.dat',skiprows=7)
 shape_points = shape[:,2:4]
 
 def unique():
-	'''Stupid ass Mox has fucking out of date numpy 
+	'''Because Mox has out of date numpy and I can't use axis argument for np.unique
 	'''
 	# shape_points_un = np.unique(shape_points,axis=0)
 	x = np.random.rand(shape_points.shape[1])# unique()
